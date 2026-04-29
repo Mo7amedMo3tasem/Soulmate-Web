@@ -83,9 +83,11 @@ const onTouchEnd   = () => {
     setOffsetX(0);
 };
 useEffect(() => {
-    const timer = setInterval(goNext, 5000);
+    const timer = setInterval(() => {
+        setCurrent((prev) => (prev + 1) % total);
+    }, 5000);
     return () => clearInterval(timer);
-}, [current]);
+}, [total]);
 
 useEffect(() => {
     const handleScroll = () => {

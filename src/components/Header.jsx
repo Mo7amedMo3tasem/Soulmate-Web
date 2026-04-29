@@ -48,10 +48,10 @@ export default function Header() {
         <div className={`secondSection ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li className="has-dropdown" ref={dropdownRef}>
-              <a
-                href="#"
+              <button
+                type="button"
                 className={`nav-link ${dropdownOpen ? 'active' : ''}`}
-                onClick={(e) => { e.preventDefault(); setDropdownOpen(!dropdownOpen); }}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 Menu
                 <span className="arrow-icon">
@@ -60,7 +60,7 @@ export default function Header() {
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </span>
-              </a>
+              </button>
               <ul className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
                 <li><a href="/hot" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Hot Drinks</a></li>
                 <li><a href="/cold" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Cold Drinks</a></li>
