@@ -5,6 +5,7 @@ import '../components/Home';
 
 import imgLogo from '../images/logo2-removebg-preview.png';
 import { useState, useEffect, useRef } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -20,6 +21,7 @@ export default function Header() {
   }, []);
   useEffect(() => {
       const switchEl  = document.getElementById('switch');
+      if (!switchEl) return;
       const handler   = () => {
           const isDark = switchEl.checked;
           document.body.classList.toggle('dark', isDark);
@@ -41,9 +43,9 @@ export default function Header() {
   return (
     <div className="mainHeader">
         <div className="firstSection">
-          <a className="logo" href="/home">
+          <Link className="logo" to="/">
             <img src={imgLogo} alt="logo" className="logo-light" />
-          </a>
+          </Link>
         </div>
         <div className={`secondSection ${menuOpen ? 'open' : ''}`}>
           <ul>
@@ -62,16 +64,16 @@ export default function Header() {
                 </span>
               </button>
               <ul className={`dropdown-menu ${dropdownOpen ? 'open' : ''}`}>
-                <li><a href="/hot" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Hot Drinks</a></li>
-                <li><a href="/cold" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Cold Drinks</a></li>
-                <li><a href="/soft" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Soft Drink</a></li>
-                <li><a href="/dessert" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Dessert Menu</a></li>
-                <li><a href="/extra" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Extra</a></li>
+                <li><NavLink to="/hot" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Hot Drinks</NavLink></li>
+                <li><NavLink to="/cold" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Cold Drinks</NavLink></li>
+                <li><NavLink to="/soft" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Soft Drink</NavLink></li>
+                <li><NavLink to="/dessert" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Dessert Menu</NavLink></li>
+                <li><NavLink to="/extra" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Extra</NavLink></li>
               </ul>
             </li>
-            <li><a href="/about" className="nav-link">About Us</a></li>
-            <li><a href="/location" className="nav-link">Our Location</a></li>
-            <li><a href="/contact" className="nav-link">Contact Us</a></li>
+            <li><NavLink to="/about" className="nav-link">About Us</NavLink></li>
+            <li><NavLink to="/location" className="nav-link">Our Location</NavLink></li>
+            <li><NavLink to="/contact" className="nav-link">Contact Us</NavLink></li>
           </ul>
         </div>
         <div className="lastSection">

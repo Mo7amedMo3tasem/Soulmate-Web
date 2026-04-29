@@ -20,7 +20,7 @@ export default function Contact() {
 
     const sendWhatsApp = () => {
         const { name, phone, message } = formData;
-        const text = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالرسالة: ${message}`;
+        const text = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nMessage: ${message}`);
         window.open(`https://wa.me/201146862114?text=${text}`, '_blank');
     };
 

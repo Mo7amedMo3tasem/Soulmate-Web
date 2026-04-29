@@ -245,6 +245,8 @@
 
   .mainHeader .secondSection .nav-link {
     position: relative;
+    background-color: var(--body-color);
+    border: none;
     display: inline-flex;
     align-items: center;
     gap: 4px;

@@ -1,6 +1,7 @@
 // Footer.jsx
 import '../css/components.css';
 import '../css/master.css';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
 return (
@@ -10,20 +11,20 @@ return (
               <div className="footerCol">
                   <h4 className="footerTitle">Page</h4>
                   <ul className="footerList">
-                      <li><a href="/home"   className="footer-link">Home</a></li>
-                      <li><a href="/about"       className="footer-link">About Us</a></li>
-                      <li><a href="/location"       className="footer-link">Our Location</a></li>
-                      <li><a href="/contact"       className="footer-link">Contact Us</a></li>
+                      <li><Link to="/" className="footer-link">Home</Link></li>
+                      <li><Link to="/about" className="footer-link">About Us</Link></li>
+                      <li><Link to="/location" className="footer-link">Our Location</Link></li>
+                      <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
                   </ul>
               </div>
               <div className="footerCol">
                   <h4 className="footerTitle">Menu</h4>
                   <ul className="footerList">
-                      <li><a href="/hot" className="footer-link">Hot Drinks</a></li>
-                      <li><a href="/cold" className="footer-link">Cold Drinks</a></li>
-                      <li><a href="/soft" className="footer-link">Soft Drinks</a></li>
-                      <li><a href="/dessert" className="footer-link">Dessert Menu</a></li>
-                      <li><a href="/extra" className="footer-link">Extra</a></li>
+                      <li><Link to="/hot" className="footer-link">Hot Drinks</Link></li>
+                      <li><Link to="/cold" className="footer-link">Cold Drinks</Link></li>
+                      <li><Link to="/soft" className="footer-link">Soft Drinks</Link></li>
+                      <li><Link to="/dessert" className="footer-link">Dessert Menu</Link></li>
+                      <li><Link to="/extra" className="footer-link">Extra</Link></li>
                   </ul>
               </div>
               <div className="footerCol">
@@ -39,15 +40,15 @@ return (
                       </li>
                       <li>
                           <a href="mailto:soulmatecafe00@gmail.com" className="footer-link footer-phone">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
                                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                               </svg>
                               soulmatecafe00@gmail.com
                           </a>
                       </li>
                       <li>
-                          <a href="location:https://maps.app.goo.gl/spbBxoh7uwUMBzuL7" className="footer-link footer-phone">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                          <a href="https://maps.app.goo.gl/spbBxoh7uwUMBzuL7" target="_blank" rel="noopener noreferrer" className="footer-link footer-phone">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
                                 <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
                                 <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                               </svg>
